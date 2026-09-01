@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #071b2a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #fbfcf8;
+  color: var(--ink);
+  font-family: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+button, a, input, select, textarea, summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #c8ec72;
+  color: #071b2a;
+}
+
+.section-shell {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: 4.5rem 1.25rem;
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #087c99;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -10rem;
+  z-index: 100;
+  border-radius: 0.75rem;
+  background: #9cd62d;
+  color: #071b2a;
+  padding: 0.75rem 1rem;
+  font-weight: 800;
+  transition: top 0.2s, opacity 0.2s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  opacity: 1;
+  pointer-events: auto;
+  outline: 3px solid #071b2a;
+}
+
+.hero-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 46px 46px;
+}
+
+.sun-orb {
+  background: radial-gradient(circle, rgba(255, 231, 139, 0.86) 0%, rgba(156, 214, 45, 0.27) 32%, transparent 68%);
+  filter: blur(5px);
+}
+
+.clip-panel {
+  clip-path: polygon(0 0, 100% 0, 100% 86%, 86% 100%, 0 100%);
+}
+
+.prose h1 {
+  font-family: var(--font-outfit);
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 1.05;
+  font-weight: 700;
+  color: #071b2a;
+}
+
+.prose h2 {
+  margin-top: 2.5rem;
+  font-family: var(--font-outfit);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #071b2a;
+}
+
+.prose p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+.prose a {
+  color: #087c99;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+@media (min-width: 640px) {
+  .section-shell {
+    padding: 5rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-shell {
+    padding: 5.5rem 2.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Hide Next.js dev indicator permanently */
+nextjs-portal,
+#nextjs-dev-indicator,
+[data-nextjs-dev-indicator],
+[data-nextjs-toast] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

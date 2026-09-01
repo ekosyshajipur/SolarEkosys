@@ -1,0 +1,1 @@
+export default function Loading() { return <div className="grid min-h-[60vh] place-items-center"><div className="flex items-center gap-3 text-sm font-extrabold text-ocean-700"><span className="size-5 animate-spin rounded-full border-2 border-ocean-700 border-t-transparent" />Loading EKOSYS…</div></div>; }
