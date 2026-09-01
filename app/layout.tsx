@@ -152,6 +152,19 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${manrope.variable} ${outfit.variable}`}>
+      <head>
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              *,::after,::before{box-sizing:border-box}
+              html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+              body{margin:0;overflow-x:hidden;background:#fbfcf8;color:#071b2a;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+              img,svg,video{max-width:100%;height:auto}
+              .section-shell{width:100%;max-width:1440px;margin-inline:auto;padding:3rem 1.25rem}
+            `,
+          }}
+        />
+      </head>
       <body className="antialiased selection:bg-solar-100 selection:text-ink">
         <a href="#main-content" className="skip-link">
           Skip to main content

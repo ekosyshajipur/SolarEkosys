@@ -153,13 +153,13 @@ export function LeadPopup() {
                       Get Up to <span className="text-ocean-700 underline underline-offset-2">₹1,13,000 Total Subsidy</span>
                     </p>
                     <p className="mt-1.5 text-[11px] font-bold text-slate-700 leading-snug">
-                      PM Surya Ghar Central DBT (₹78,000) + Extra Special State Subsidy (₹20,000) + EKOSYS Assistance (₹15,000) = <span className="text-ocean-700 font-extrabold">₹1,13,000</span>
+                      PM Surya Ghar Central DBT (₹78,000) + Extra Special State Subsidy (₹20,000) + EKOSYS Assistance (₹15,000) = <span className="text-ocean-700 font-extrabold">₹1,13,000*</span>
                     </p>
                   </div>
 
                   <ul className="mt-4 space-y-2 text-xs sm:text-sm font-bold text-slate-700">
                     {[
-                      "Up to ₹1,13,000 Total Subsidy Benefit assistance",
+                      "Up to ₹1,13,000* Total Subsidy Benefit assistance",
                       "Custom 3D rooftop shadow analysis",
                       "PM Surya Ghar paperwork & DISCOM net-metering support",
                       "Tier-1 components with 30-Year Warranty*",

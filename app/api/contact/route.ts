@@ -129,19 +129,59 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  // 2. Forward lead to Google Sheets webhook if configured
+  // 2. Forward lead to Google Sheets webhook (supports e.parameter, query params & form-urlencoded)
   const endpoint = process.env.GOOGLE_SHEETS_API_URL || process.env.GOOGLE_SHEET_URL;
   if (endpoint) {
     try {
-      const upstream = await fetch(endpoint, {
+      const formattedDate = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+      const leadMap: Record<string, string> = {
+        // Exact Sheet Headers (Title Case / Header match)
+        Date: formattedDate,
+        Name: lead.name,
+        Phone: lead.phone,
+        Email: lead.email || "",
+        City: lead.city || "",
+        "Enquiry Type": lead.enquiryType,
+        Requirement: lead.requirement || "",
+        
+        // Standard & lowercase variations
+        date: formattedDate,
+        name: lead.name,
+        fullName: lead.name,
+        phone: lead.phone,
+        mobile: lead.phone,
+        email: lead.email || "",
+        city: lead.city || "",
+        enquiryType: lead.enquiryType,
+        EnquiryType: lead.enquiryType,
+        enquiry_type: lead.enquiryType,
+        service: lead.enquiryType,
+        requirement: lead.requirement || "",
+        message: lead.requirement || "",
+        source: "ekosys-solar-website",
+        submittedAt,
+      };
+
+      const searchParams = new URLSearchParams();
+      for (const [key, value] of Object.entries(leadMap)) {
+        searchParams.append(key, value);
+      }
+
+      // Append query parameters to endpoint URL so e.parameter in GAS is ALWAYS populated
+      const targetUrl = endpoint.includes("?")
+        ? `${endpoint}&${searchParams.toString()}`
+        : `${endpoint}?${searchParams.toString()}`;
+
+      const upstream = await fetch(targetUrl, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
           ...(process.env.GOOGLE_SHEETS_API_TOKEN
             ? { "X-EKOSYS-Webhook-Token": process.env.GOOGLE_SHEETS_API_TOKEN }
             : {}),
         },
-        body: JSON.stringify(payload),
+        body: searchParams.toString(),
+        redirect: "follow",
         cache: "no-store",
         signal: AbortSignal.timeout(10_000),
       });
@@ -154,6 +194,35 @@ export async function POST(request: NextRequest) {
     }
   } else {
     console.log("[Lead Captured]:", payload);
+  }
+
+  // 3. Forward lead to Biziverse CRM if configured
+  const crmUrl = process.env.CRM_API_URL;
+  const crmKey = process.env.CRM_API_KEY;
+  if (crmUrl && crmKey) {
+    try {
+      await fetch(crmUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${crmKey}`,
+          "X-API-Key": crmKey,
+        },
+        body: JSON.stringify({
+          apiKey: crmKey,
+          name: lead.name,
+          phone: lead.phone,
+          email: lead.email || "",
+          city: lead.city || "",
+          leadSource: "EKOSYS Solar Website",
+          requirement: `[${lead.enquiryType}] ${lead.requirement || ""}`.trim(),
+        }),
+        redirect: "follow",
+        signal: AbortSignal.timeout(8_000),
+      });
+    } catch (err) {
+      console.warn("[CRM Forwarding Error]:", err);
+    }
   }
 
   return NextResponse.json({

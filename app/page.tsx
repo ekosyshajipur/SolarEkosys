@@ -10,7 +10,6 @@ import {
   ShieldCheck,
   Sparkles,
   TrendingUp,
-  Wrench,
 } from "lucide-react";
 import { HeroSlider } from "@/components/hero-slider";
 import { FaqList } from "@/components/page-elements";
@@ -21,9 +20,7 @@ import {
   commercialApplicationsData,
   homeFaqs,
   howSolarWorksFlow,
-  processSteps,
   productCategories,
-  projectShowcases,
   residentialSystemOptions,
   services,
   subsidySlabsTable,
@@ -59,7 +56,7 @@ export default function HomePage() {
 
             <Reveal delay={0.12}>
               <p className="mt-5 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
-                From Tier-1 solar modules & smart inverters to turnkey residential rooftop installations, high-capacity industrial plants, PM Surya Ghar subsidy processing, and lifetime maintenance in Hajipur, Vaishali, and across Bihar.
+                From Tier-1 solar modules & smart inverters to turnkey residential rooftop installations, high-capacity industrial plants, PM Surya Ghar subsidy processing, and lifetime maintenance across Bihar.
               </p>
             </Reveal>
 
@@ -111,7 +108,7 @@ export default function HomePage() {
           {[
             { num: "6", label: "Dedicated Solar Solutions", sub: "Rooftop, Commercial, Products & O&M" },
             { num: "10-Step", label: "Quality Installation Process", sub: "Civil, Electrical & DISCOM Net Meter" },
-            { num: "₹1,13,000", label: "Max Subsidy Benefit*", sub: "Central ₹78k + State ₹20k + EKOSYS ₹15k" },
+            { num: "₹1,13,000*", label: "Max Subsidy Benefit*", sub: "Central ₹78k + State ₹20k + EKOSYS ₹15k" },
             { num: "30 Years*", label: "Performance Warranty", sub: "Tier-1 ALMM & TOPCon Solar Modules" },
           ].map((item) => (
             <div key={item.label} className="bg-white p-5 sm:p-6">
@@ -133,7 +130,7 @@ export default function HomePage() {
                 <span>Limited Period Subsidy Scheme</span>
               </div>
               <h2 className="mt-3 font-display text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white">
-                PM Surya Ghar Central DBT (<span className="text-solar-400">₹78,000</span>) + Extra State Subsidy (<span className="text-solar-400">₹20,000</span>) + EKOSYS Assistance (<span className="text-solar-400">₹15,000</span>) = <span className="text-solar-400 underline underline-offset-4">₹1,13,000</span>
+                PM Surya Ghar Central DBT (<span className="text-solar-400">₹78,000</span>) + Extra State Subsidy (<span className="text-solar-400">₹20,000</span>) + EKOSYS Assistance (<span className="text-solar-400">₹15,000</span>) = <span className="text-solar-400 underline underline-offset-4">₹1,13,000*</span>
               </h2>
               <p className="mt-3 text-xs sm:text-sm text-slate-200 leading-relaxed max-w-3xl">
                 Claim maximum financial assistance on your rooftop solar plant in Bihar. EKOSYS handles all National Portal documentation, DISCOM approvals, and direct bank transfer facilitation.
@@ -141,7 +138,7 @@ export default function HomePage() {
             </div>
             <div className="shrink-0 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <ButtonLink href="/contact" variant="primary" arrow>
-                Claim ₹1,13,000 Subsidy
+                Claim ₹1,13,000* Subsidy
               </ButtonLink>
               <ButtonLink href="/subsidy" variant="outline">
                 View Slabs Breakdown
@@ -206,7 +203,7 @@ export default function HomePage() {
               <div className="absolute bottom-6 left-6 right-6 text-white">
                 <p className="text-xs font-black uppercase tracking-wider text-solar-400">Hajipur Office & Team</p>
                 <p className="mt-1 font-display text-xl font-bold">1st Floor, Tulsi Singh Complex, Marai Road</p>
-                <p className="text-xs text-slate-300">Prompt on-site surveys across Vaishali, Patna & North Bihar</p>
+                <p className="text-xs text-slate-300">Prompt on-site surveys across Bihar</p>
               </div>
             </div>
           </Reveal>
@@ -512,147 +509,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 10. 10-STEP INSTALLATION PROCESS */}
-      <section className="bg-ink text-white">
-        <div className="section-shell">
-          <Reveal>
-            <div className="text-center max-w-3xl mx-auto">
-              <p className="text-xs font-black uppercase tracking-[.2em] text-solar-400">Structured Quality Assurance</p>
-              <h2 className="mt-2 font-display text-3xl font-bold tracking-tight sm:text-5xl">
-                Our 10-Step Solar Installation Journey
-              </h2>
-              <p className="mt-3 text-sm sm:text-base leading-7 text-slate-300">
-                Solar should never leave you guessing. We follow a transparent, visible 10-step protocol from initial survey to net-meter commissioning.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="mt-10 grid gap-3.5 sm:grid-cols-2 lg:grid-cols-5">
-            {processSteps.map((step, index) => (
-              <Reveal key={step} delay={index * 0.03}>
-                <div className="flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5 backdrop-blur transition hover:border-solar-400 hover:bg-white/10">
-                  <div>
-                    <span className="grid size-8 place-items-center rounded-xl bg-solar-400 text-xs font-black text-ink">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <p className="mt-3 font-bold text-white text-xs sm:text-sm leading-snug">{step}</p>
-                  </div>
-                  <span className="mt-3 text-[10px] font-black uppercase tracking-wider text-slate-400">Checkpoint {index + 1}</span>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
-          <div className="mt-10 text-center">
-            <ButtonLink href="/installation" variant="primary" arrow>
-              View Detailed Installation Standards
-            </ButtonLink>
-          </div>
-        </div>
-      </section>
-
-      {/* 11. PROJECT SHOWCASE / APPLICATION PORTFOLIO - Desktop view */}
-      <section className="hidden lg:block section-shell">
-        <Reveal>
-          <SectionHeading
-            center
-            eyebrow="Application Portfolio"
-            title="Real-World Solar Engineering Solutions in Bihar"
-            text="Explore sample project architectures across residential villas, commercial showrooms, industrial metal roofs, and elevated superstructures."
-          />
-        </Reveal>
-
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projectShowcases.map((proj, idx) => (
-            <Reveal key={proj.id} delay={idx * 0.04}>
-              <HoverLift>
-                <div className="flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:shadow-card">
-                  <div className="relative h-48 overflow-hidden bg-slate-100">
-                    <Image
-                      src={proj.image}
-                      alt={proj.title}
-                      fill
-                      className="object-cover transition duration-500 hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                    <div className="absolute left-4 top-4 rounded-full bg-ink/80 px-3 py-1 text-xs font-bold text-solar-400 backdrop-blur">
-                      {proj.category}
-                    </div>
-                  </div>
-
-                  <div className="flex flex-1 flex-col p-5 sm:p-6">
-                    <div className="flex items-center justify-between text-xs font-bold text-ocean-700">
-                      <span>{proj.location}</span>
-                      <span className="text-slate-500">{proj.capacity}</span>
-                    </div>
-
-                    <h3 className="mt-2 font-display text-base sm:text-lg font-bold leading-snug text-ink">{proj.title}</h3>
-                    <p className="mt-2 flex-1 text-xs leading-5 text-slate-600">{proj.description}</p>
-
-                    <div className="mt-3.5 border-t border-slate-100 pt-3">
-                      <p className="text-[11px] font-semibold text-slate-500">
-                        <strong className="text-ink">Highlights:</strong> {proj.features}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </HoverLift>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* 12. SOLAR OPERATION & MAINTENANCE (O&M) - Desktop view */}
-      <section className="hidden lg:block bg-slate-100">
-        <div className="section-shell">
-          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_.9fr]">
-            <Reveal>
-              <div className="relative min-h-[380px] sm:min-h-[420px] overflow-hidden rounded-[2.5rem] shadow-card bg-ink">
-                <Image
-                  src="/images/services/solar-maintenance.png"
-                  alt="Technician conducting thermographic hotspot inspection and cleaning on solar panels"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 45vw"
-                />
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.08}>
-              <SectionHeading
-                eyebrow="Solar Care & Maintenance"
-                title="Protecting Your 30-Year Energy Yield"
-                text="Dust, loose connections, hotspot degradation, or faulty bypass diodes can decrease power output by 15% to 30%. Our Hajipur O&M team provides systematic servicing."
-              />
-
-              <div className="mt-6 space-y-2.5">
-                {[
-                  { title: "Soft-Water TDS-Controlled Cleaning", desc: "Prevents hard-water mineral scaling on anti-reflective glass coating." },
-                  { title: "Infrared Thermography Scans", desc: "Pinpoints micro-cracks, shaded cell hotspots, and bypass diode failures." },
-                  { title: "String & Inverter Diagnostics", desc: "Voc/Isc testing, insulation resistance, and firmware telemetry updates." },
-                  { title: "Chemical Earthing Audit (<5 Ohms)", desc: "Maintains lightning arrestor and ground fault protection integrity." },
-                ].map((item) => (
-                  <div key={item.title} className="flex gap-3 rounded-2xl border border-slate-200 bg-white p-3.5 shadow-sm">
-                    <Wrench className="size-4 shrink-0 text-ocean-700 mt-0.5" />
-                    <div>
-                      <h3 className="text-xs sm:text-sm font-bold text-ink">{item.title}</h3>
-                      <p className="mt-0.5 text-xs leading-5 text-slate-600">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-6">
-                <ButtonLink href="/services/solar-maintenance" variant="dark" arrow>
-                  Explore Solar Maintenance & AMC Plans
-                </ButtonLink>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* 13. SUBSIDY MATRIX & GUIDANCE */}
+      {/* SUBSIDY MATRIX & GUIDANCE */}
       <section className="section-shell">
         <Reveal>
           <SectionHeading
@@ -698,39 +555,6 @@ export default function HomePage() {
           <ButtonLink href="/subsidy" variant="dark" arrow>
             Read Complete Bihar Solar Subsidy Guide
           </ButtonLink>
-        </div>
-      </section>
-
-      {/* 14. CUSTOMER JOURNEY TIMELINE - Desktop view */}
-      <section className="hidden lg:block bg-solar-50/80">
-        <div className="section-shell">
-          <Reveal>
-            <SectionHeading
-              center
-              eyebrow="Customer Journey"
-              title="How Your Solar Plant Goes from Idea to Free Power"
-              text="We guide you smoothly through every milestone with transparent timelines and zero hidden surprises."
-            />
-          </Reveal>
-
-          <div className="mt-10 grid gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { num: "01", title: "Discover & Consult", desc: "Share your monthly electricity bills and property location for free initial sizing." },
-              { num: "02", title: "3D Survey & Design", desc: "Our engineers visit your rooftop to conduct shadow analysis and structural sizing." },
-              { num: "03", title: "Feasibility & Approval", desc: "We file feasibility applications with NBPDCL / SBPDCL on the National Portal." },
-              { num: "04", title: "Installation & Clamping", desc: "Hot-dip GI structures erected, Tier-1 panels clamped, and conduit cabling laid." },
-              { num: "05", title: "Chemical Earthing", desc: "Dual earth pits installed with surge protection devices tested below 5 Ohms." },
-              { num: "06", title: "DISCOM Net Metering", desc: "DISCOM tests the bi-directional net meter and synchronizes your plant to the grid." },
-              { num: "07", title: "DBT Subsidy Release", desc: "Commissioning certificate uploaded to portal for direct bank account subsidy credit." },
-              { num: "08", title: "App Handover & Care", desc: "Receive login credentials for daily mobile generation telemetry and lifetime support." },
-            ].map((item) => (
-              <div key={item.num} className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-sm">
-                <span className="font-display font-black text-xl text-solar-500">{item.num}</span>
-                <h3 className="mt-1.5 font-display text-sm sm:text-base font-bold text-ink">{item.title}</h3>
-                <p className="mt-1.5 text-xs leading-5 text-slate-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

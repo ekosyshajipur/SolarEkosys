@@ -253,8 +253,8 @@ export default function InstallationPage() {
             />
           </Reveal>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {projectShowcases.slice(0, 3).map((proj) => (
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {projectShowcases.map((proj) => (
               <Reveal key={proj.id}>
                 <HoverLift>
                   <div className="flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
