@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return {};
   return {
     title: `${service.name} in Bihar · EKOSYS Solar`,
-    description: `${service.intro} Serving Hajipur, Vaishali, Patna, and North Bihar with Tier-1 components and certified EPC installation.`,
+    description: `${service.intro} Serving Hajipur, Vaishali, Patna, and Bihar with Tier-1 components and certified EPC installation.`,
     alternates: { canonical: `/services/${service.slug}` },
     openGraph: {
       url: `/services/${service.slug}`,

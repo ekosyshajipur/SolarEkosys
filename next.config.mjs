@@ -20,6 +20,7 @@ const nextConfig = {
   ],
   images: {
     formats: ["image/avif", "image/webp"],
+    qualities: [75, 80, 85, 90],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 2592000,
@@ -27,8 +28,43 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/service",
+        destination: "/services",
+        permanent: true,
+      },
+      {
         source: "/services/solar-installation",
         destination: "/services/installation-services",
+        permanent: true,
+      },
+      {
+        source: "/product",
+        destination: "/services/solar-products",
+        permanent: true,
+      },
+      {
+        source: "/products",
+        destination: "/services/solar-products",
+        permanent: true,
+      },
+      {
+        source: "/calculator",
+        destination: "/subsidy",
+        permanent: true,
+      },
+      {
+        source: "/solar-calculator",
+        destination: "/subsidy",
+        permanent: true,
+      },
+      {
+        source: "/quote",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/about-us",
+        destination: "/about",
         permanent: true,
       },
       {
@@ -44,6 +80,7 @@ const nextConfig = {
     ];
   },
   async headers() {
+    const isProd = process.env.NODE_ENV === "production";
     return [
       {
         // Allow CORS & long-lived caching on all Next.js static scripts, CSS and fonts
@@ -51,7 +88,12 @@ const nextConfig = {
         headers: [
           { key: "Access-Control-Allow-Origin", value: "*" },
           { key: "Access-Control-Allow-Methods", value: "GET, HEAD, OPTIONS" },
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+          {
+            key: "Cache-Control",
+            value: isProd
+              ? "public, max-age=31536000, immutable"
+              : "no-cache, no-store, must-revalidate",
+          },
         ],
       },
       {
@@ -59,7 +101,12 @@ const nextConfig = {
         source: "/images/:path*",
         headers: [
           { key: "Access-Control-Allow-Origin", value: "*" },
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+          {
+            key: "Cache-Control",
+            value: isProd
+              ? "public, max-age=31536000, immutable"
+              : "no-cache, no-store, must-revalidate",
+          },
         ],
       },
       {

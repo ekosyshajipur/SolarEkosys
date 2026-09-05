@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "node --max-old-space-size=4096 node_modules/next/dist/bin/next build",
+    "clean": "node scripts/clean.js",
+    "dev": "node scripts/clean.js && next dev",
+    "build": "node scripts/clean.js && node --max-old-space-size=4096 node_modules/next/dist/bin/next build && node scripts/post-build.js && node scripts/sync-analysis.js",
     "start": "next start",
     "lint": "eslint . --max-warnings=0",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "sync:analysis": "node scripts/sync-analysis.js"
   },
   "dependencies": {
     "@vercel/speed-insights": "^2.0.0",

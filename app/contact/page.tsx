@@ -229,7 +229,7 @@ export default function ContactPage() {
             center
             eyebrow="Visit Our Center"
             title="Our Hajipur Solar Experience Center"
-            text="Located on Marai Road directly in front of Aakash Ganga TVS showroom."
+            text="Located Opposite to Municipal Office, Hajipur - 844101, Vaishali, Bihar, India."
           />
         </Reveal>
         <div className="mt-8">

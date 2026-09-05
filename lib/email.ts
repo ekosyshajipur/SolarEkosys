@@ -75,7 +75,7 @@ function generateCustomerEmailHtml(payload: LeadEmailPayload): string {
         <h3>What happens next?</h3>
         <p style="margin: 0 0 10px; font-size: 13px; color: #475569;">
           1. <strong>Site & Feasibility Assessment:</strong> An EKOSYS solar engineer will connect with you to review your roof layout, electricity connection type, and energy usage.<br>
-          2. <strong>PM Surya Ghar Subsidy Check:</strong> We will verify your eligibility for total subsidies up to ₹1,13,000 (Central DBT ₹78,000 + State Subsidy ₹20,000 + EKOSYS Assistance ₹15,000) and DISCOM net-metering approvals.<br>
+          2. <strong>PM Surya Ghar Subsidy & Limited Offer:</strong> We will verify your eligibility for official Government Subsidy up to ₹98,000 (Central DBT ₹78,000 + State Subsidy ₹20,000) plus our exclusive EKOSYS Assistance of ₹15,000 (Limited Offer · first come, first get offer) for a total financial benefit of ₹1,13,000.<br>
           3. <strong>Tailored System Design:</strong> You will receive a customized Bill of Materials (BOM) proposal with 30-Year Performance Warranties*.
         </p>
       </div>

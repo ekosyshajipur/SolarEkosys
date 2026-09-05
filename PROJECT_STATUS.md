@@ -52,20 +52,49 @@
 
 ## NAP & Local SEO Verification
 - **Legal Name**: `EKOSYS Corporation`
-- **Address**: `1st Floor, Tulsi Singh Complex, Marai Road, In Front Of Aakash Ganga TVS, Hajipur - 844101, Bihar, India`
+- **Address**: `Opposite to Municipal Office, Hajipur - 844101, Vaishali, Bihar, India`
 - **Phone**: `+91 76448 68086` (`+917644868086`) | **Email**: `ekosys.corp@gmail.com`
 - **Geo Coordinates**: Latitude `25.6858`, Longitude `85.2154`
 - **Structured Data**: `LocalBusiness` / `SolarEnergyCompany`, `Article`, `FAQPage`, `Service`, `BreadcrumbList`.
 
+## Single Centralized Architecture File (`WEBSITE_REGISTRY.json`)
+- **Requirement Fulfilled**: Instead of scanning dozens of files each time, the entire website structure, metadata, 39 routes, 19 interactive widgets, design system tokens, and runtime fixes are stored in `WEBSITE_REGISTRY.json`.
+- **Sync Command**: `npm run sync:analysis` (`node scripts/sync-analysis.js`) keeps `WEBSITE_REGISTRY.json` synchronized on every build.
+- **Workflow**: All analysis is retrieved from this single file first, tasks are executed, and the file is automatically updated.
+
+## Permanent Chunk Mismatch Resolution
+- **Problem**: Next.js 15 dev/build transitions caused `Cannot find module './331.js' Require stack: webpack-runtime.js` when dev `webpack-runtime.js` attempted to load chunks from `./` while production chunks resided in `chunks/`.
+- **Permanent Solution**:
+  1. **Dynamic Resolution Hook**: Installed `Module._resolveFilename` fallback interceptor at the top of `next.config.mjs` to seamlessly resolve `./<id>.js` chunks from `.next/server/chunks/` or `.next/server/`.
+  2. **Cache Isolation (`scripts/clean.js`)**: Runs automatically before `npm run dev` and `npm run build` to purge stale server caches without affecting developer workflows.
+  3. **Manifest Sync (`scripts/post-build.js`)**: Ensures all compiled `page.js` and `route.js` files are registered in `app-paths-manifest.json` after build.
+
+## Elevated UI & Best Interactive Experience
+- **Interactive Solar Sizing & Subsidy Calculator**:
+  - Live monthly bill slider (₹1,000 to ₹15,000/mo) and kW selector (1 to 10 kW).
+  - PM Surya Ghar central (₹78k) + Bihar state (₹20k) + EKOSYS assistance (₹15k) breakdown.
+  - One-click **WhatsApp My Estimate** button that pre-fills calculated system capacity, subsidy, and savings directly into WhatsApp.
+- **Upgraded Appliance Load Simulator**:
+  - Live interactive watt load meter with color-coded capacity utilization gauge.
+  - Interactive toggle buttons: click any appliance to turn it ON/OFF in real time.
+  - "Turn All On" and "Turn All Off" quick controls.
+  - Status alerts confirming 100% solar coverage vs net-meter grid backup.
+- **Mobile Floating Action Bar**:
+  - Fixed glassmorphism bar on mobile viewports for one-tap calling, WhatsApp chat, and quotation requests.
+  - Configured with ample footer clearance (`pb-20 md:pb-10`).
+- **Interactive Project Showcase**:
+  - Real Bihar solar installations with interactive technical spec modals (inverter, modules, GI superstructure, chemical earthing, annual savings).
+- **Diagnostic O&M Inspector**:
+  - 4 interactive maintenance protocols with FLIR thermal scan hotspot analysis, TDS soft water cleaning, and earth pit resistance audits.
+
 ## Verification Suites Passed
 - `npm run typecheck` (`tsc --noEmit`): **0 errors**
 - `npm run lint` (`eslint . --max-warnings=0`): **0 errors, 0 warnings**
-- `npm run build` (`next build`): **39/39 static routes pre-rendered with code 0**
-- **Offline Resilient**: Replaced blocking `next/font/google` server downloads with direct CSS imports, eliminating network timeouts (`ECONNRESET`, socket hangup) and dev overlay crashes (`segment-explorer-node`).
-- **Brand Logo Standardized**: Official `webLogo.png` with transparent background rendered in high-definition across Header, Footer, and Lead Popup.
-- **Hero Image Slider**: Auto-advancing multi-image background slideshow active on the Home Page (`components/hero-slider.tsx`).
-- **Interactive Products Catalog**: 12+ hardware components with category filtering and click-to-view modal specs on `/services/solar-products` (`components/product-catalog.tsx`).
-- **All Service Subpages Operational**: 6 specialized subpages rendered with comprehensive content, tables, and photos.
+- `npm run build` (`next build`): **37/37 static pages generated with code 0**
+- `node scratch/test-routes.js`: **All routes returning HTTP 200 with full CSS stylesheets attached**
+- **Offline Resilient**: Direct typography fallbacks prevent font download crashes (`ECONNRESET`).
+- **Brand Logo Standardized**: Official transparent `webLogo.png` in header, footer, and lead modals.
 
 ## Remaining (Deployment-Specific Action)
 - Supply live credentials for `GOOGLE_SHEETS_API_URL` and `SMTP_HOST` / `RESEND_API_KEY` in `.env.local` when deploying to production.
+

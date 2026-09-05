@@ -50,7 +50,7 @@ const companyPillars = [
     icon: UsersRound,
     title: "Local Bihar Commitment",
     subtitle: "Headquartered in Hajipur",
-    text: "Based at Tulsi Singh Complex on Marai Road, Hajipur, our dedicated on-ground engineers provide rapid on-site surveys, swift DISCOM liaisoning, and dependable after-sales maintenance across Vaishali, Patna, and North Bihar.",
+    text: "Based Opposite to Municipal Office, Hajipur, our dedicated on-ground engineers provide rapid on-site surveys, swift DISCOM liaisoning, and dependable after-sales maintenance across Vaishali, Patna, and North Bihar.",
   },
 ];
 
@@ -118,7 +118,7 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white">
                 <p className="text-xs font-black uppercase tracking-wider text-solar-400">Head Office</p>
-                <p className="mt-1 font-display text-xl font-bold">1st Floor, Tulsi Singh Complex, Hajipur</p>
+                <p className="mt-1 font-display text-xl font-bold">Opposite to Municipal Office, Hajipur</p>
                 <p className="text-xs text-slate-300">Serving Vaishali, Patna, Muzaffarpur, Samastipur & North Bihar</p>
               </div>
             </div>

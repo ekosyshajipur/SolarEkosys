@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Breadcrumbs, CtaBand, FaqList } from "@/components/page-elements";
 import { HoverLift, Reveal } from "@/components/reveal";
+import { InteractiveInstallationJourney } from "@/components/interactive-installation-journey";
 import { ButtonLink, SectionHeading } from "@/components/ui";
 import { projectShowcases } from "@/lib/content";
 
@@ -23,59 +24,6 @@ export const metadata: Metadata = {
     images: [{ url: "/images/installation/solar-installation-team.png", alt: "EKOSYS solar installation work" }],
   },
 };
-
-const installationCheckpoints = [
-  {
-    num: "01",
-    title: "On-Site Rooftop & Shadow Feasibility Survey",
-    desc: "Our engineers inspect your roof orientation, azimuth angle, parapet wall shadows, structural load capacity, and AC/DC cable pathway options.",
-  },
-  {
-    num: "02",
-    title: "3D CAD Modeling & Optimum Tilt Engineering",
-    desc: "We generate a customized 3D solar layout with 25° to 27° true South tilt, maximizing annual kilowatt-hour generation under Bihar insolation.",
-  },
-  {
-    num: "03",
-    title: "Transparent BOM & DISCOM Feasibility Filing",
-    desc: "We provide an itemized Bill of Materials with brand datasheets and file for grid synchronization clearance on the National Portal.",
-  },
-  {
-    num: "04",
-    title: "Structural Foundation & Hot-Dip GI Erection",
-    desc: "Galvanized steel columns (80+ microns zinc) securely mounted using non-penetrating chemical anchor fasteners and waterproof bitumen seals.",
-  },
-  {
-    num: "05",
-    title: "Tier-1 ALMM Module Clamping & Alignment",
-    desc: "High-efficiency N-Type TOPCon or Mono PERC modules fastened with anodized aluminum mid/end clamps and EPDM rubber dampening pads.",
-  },
-  {
-    num: "06",
-    title: "Smart Inverter & Conduit DC Cabling",
-    desc: "Double-insulated UV-resistant XLPO solar DC cables routed through heavy-duty PVC conduits to an IP65 smart grid-tied string inverter.",
-  },
-  {
-    num: "07",
-    title: "Dedicated Chemical Earthing & Surge Arrestors",
-    desc: "Installation of separate copper-bonded chemical earthing pits for DC, AC, and Lightning Arrestor (LA), tested below 5 Ohms resistance.",
-  },
-  {
-    num: "08",
-    title: "Pre-Commissioning Quality & Torque Audit",
-    desc: "String open-circuit voltage (Voc), short-circuit current (Isc), insulation resistance, and bolt torque tightness systematically verified.",
-  },
-  {
-    num: "09",
-    title: "DISCOM Net Meter Testing & Synchronization",
-    desc: "Liaisoning with NBPDCL / SBPDCL electrical inspectors for bi-directional net meter installation and grid synchronization.",
-  },
-  {
-    num: "10",
-    title: "Handover Kit, App Setup & Warranty Handover",
-    desc: "Client orientation for real-time mobile energy monitoring app, equipment warranty certificates, Single-Line Diagrams (SLD), and AMC setup.",
-  },
-];
 
 const engineeringStandards = [
   {
@@ -187,20 +135,8 @@ export default function InstallationPage() {
             </div>
           </Reveal>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2">
-            {installationCheckpoints.map((cp) => (
-              <Reveal key={cp.num}>
-                <div className="flex h-full gap-5 rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur transition hover:border-solar-400/50 hover:bg-white/10">
-                  <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-solar-400 font-display text-lg font-black text-ink">
-                    {cp.num}
-                  </span>
-                  <div>
-                    <h3 className="font-display text-lg font-bold text-white leading-snug">{cp.title}</h3>
-                    <p className="mt-2 text-xs leading-6 text-slate-300">{cp.desc}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+          <div className="mt-10">
+            <InteractiveInstallationJourney />
           </div>
         </div>
       </section>

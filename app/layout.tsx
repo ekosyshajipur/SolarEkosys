@@ -4,6 +4,7 @@ import "./globals.css";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { LeadPopup } from "@/components/lead-popup";
+import { MobileFloatingBar } from "@/components/mobile-floating-bar";
 import { SiteBehavior } from "@/components/site-behavior";
 import { absoluteUrl, site } from "@/lib/site";
 
@@ -174,6 +175,7 @@ export default function RootLayout({
         <Footer />
         <SiteBehavior />
         <LeadPopup />
+        <MobileFloatingBar />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}

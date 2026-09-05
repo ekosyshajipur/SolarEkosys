@@ -84,9 +84,9 @@ export function HeroSlider() {
         );
       })}
 
-      {/* Dark readable gradient overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,27,42,.98)_0%,rgba(7,27,42,.88)_45%,rgba(7,27,42,.55)_75%,rgba(7,27,42,.3)_100%)]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-ink/40" />
+      {/* Refined gradient overlay: high clarity over imagery on the right, soft contrast scrim on left for text */}
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,27,42,0.85)_0%,rgba(7,27,42,0.65)_35%,rgba(7,27,42,0.20)_65%,rgba(7,27,42,0.05)_100%)]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-ink/20" />
     </div>
   );
 }

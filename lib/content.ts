@@ -23,7 +23,7 @@ export const services: ServiceItem[] = [
     name: "Solar Products",
     short: "Tier-1 Mono PERC & TOPCon panels, grid-tied and hybrid inverters, lithium batteries, and hot-dip GI mounting structures.",
     intro: "Make every watt count with thoughtfully selected, Tier-1 solar products engineered for Indian climactic conditions. EKOSYS delivers high-efficiency components tested for high temperatures, monsoon humidity, and long-term durability.",
-    image: "/images/products/solar-components.png",
+    image: "/images/products/solar-inverter-system.jpg",
     icon: SunMedium,
     benefits: [
       "Tier-1 Mono PERC, N-Type TOPCon, and Bifacial solar modules with 30-Year Performance Warranties*",
@@ -70,7 +70,7 @@ export const services: ServiceItem[] = [
     name: "Rooftop Solar",
     short: "Turn unused roof space into a reliable, high-yield clean electricity generating power plant.",
     intro: "Transform your idle rooftop into a clean energy power plant that slashes grid electricity bills by up to 80-90%. EKOSYS designs custom on-grid, hybrid, and elevated rooftop systems customized to your shadow conditions and energy needs.",
-    image: "/images/home/solar-home-hero.png",
+    image: "/images/home/modern-solar-rooftop.jpg",
     icon: Home,
     benefits: [
       "Custom shadow analysis and 3D structural layout optimization for maximum seasonal generation",
@@ -118,44 +118,44 @@ export const services: ServiceItem[] = [
     short: "Stress-free home solar installations with PM Surya Ghar subsidy coordination and lifelong savings.",
     intro: "Solar should be empowering, dependable, and simple. EKOSYS handles the entire home solar journey—from analyzing your monthly electricity bills and rooftop shadow modeling to subsidy documentation, DISCOM net-meter installation, and lifetime support.",
     image: "/images/home/residential-solar.png",
-    icon: Home,
+    icon: BatteryCharging,
     benefits: [
-      "Save up to ₹30,000 to ₹1,00,000+ annually on household electricity expenses",
-      "Complete end-to-end PM Surya Ghar: Muft Bijli Yojana subsidy guidance and portal processing",
-      "Clean, aesthetic rooftop installation with zero roof puncture damage and heavy-duty waterproofing",
-      "Dedicated local support from our Hajipur engineering team whenever you need service",
+      "Seamless subsidy application on the National Rooftop Solar Portal with guaranteed document verification",
+      "Custom system sizing based on connected electrical load and seasonal consumption trends",
+      "Tier-1 ALMM-listed solar panels guaranteed to perform for 30+ years with linear degradation warranty",
+      "Dedicated after-sales support with preventive maintenance visits and generation monitoring",
     ],
     suitedFor: [
-      "Single-family independent houses and duplexes",
-      "Joint families with high air conditioning and appliance consumption",
-      "Homeowners seeking energy independence and protection against future tariff hikes",
+      "Homeowners seeking zero daytime electricity bills",
+      "Families operating multiple inverter ACs during peak summer months",
+      "Homes experiencing recurring grid tariff hikes and voltage instability",
     ],
     steps: [
-      "Share recent electricity bills for consumption profiling",
-      "On-site shadow analysis and roof structure inspection",
-      "Custom system sizing (typical 2 kW, 3 kW, 5 kW, or 10 kW)",
-      "Safety-certified installation with chemical earthing",
-      "DISCOM net meter synchronization & subsidy claim support",
+      "Bill analysis & shadow survey",
+      "DISCOM feasibility application & approval",
+      "Turnkey structural erection & wiring",
+      "Bi-directional net-meter installation",
+      "Subsidy disbursal facilitation & handover",
     ],
     components: [
-      "High-efficiency Mono PERC / Half-cut Solar Modules",
-      "Single-phase / Three-phase On-Grid Smart Inverter",
-      "Heavy-gauge GI Mounting Framework",
-      "Dual-MPPT Tracking for multi-angle roof facets",
-      "Smart Mobile App for daily generation tracking",
+      "Bifacial / N-Type TOPCon High-Efficiency Modules",
+      "Smart Single-Phase or Three-Phase On-Grid Inverter",
+      "Galvanized Steel Mounting Superstructure",
+      "Class-II Surge Protection DCDB & ACDB",
+      "Chemical Copper Earthing & Lightning Arrestor",
     ],
     faqs: [
       {
-        question: "What capacity solar system does a typical home in Bihar need?",
-        answer: "A standard 2-3 BHK home with lights, fans, refrigerator, television, and 1 air conditioner typically requires a 3 kW solar system (generating ~12-14 units per day). Homes with 2-3 air conditioners or water pumps generally benefit from 5 kW to 8 kW installations.",
+        question: "How much can I save monthly with a 3 kW residential system?",
+        answer: "A 3 kW system in Bihar generates approximately 360 to 420 units of electricity per month, translating to direct monthly bill savings of ₹2,500 to ₹3,200 (₹30,000+ per year). Over 30 years, it saves well over ₹9,00,000 in grid electricity expenses.",
       },
       {
-        question: "How much government subsidy is available for residential solar in Bihar?",
-        answer: "Under the PM Surya Ghar: Muft Bijli Yojana, eligible residential grid-connected systems receive up to ₹78,000 Central DBT Subsidy + ₹20,000 Extra Special Assistance (Total Benefit up to ₹98,000) for 3 kW and above systems (₹30,000 for 1 kW, ₹60,000 for 2 kW). EKOSYS assists with all portal documentation and DISCOM coordination.",
+        question: "How does EKOSYS help with the PM Surya Ghar subsidy?",
+        answer: "EKOSYS handles the entire end-to-end subsidy process: registering your application on the National Portal for Rooftop Solar, liaising with NBPDCL/SBPDCL for technical feasibility, installing certified ALMM DCR modules, submitting joint commissioning reports, and verifying that the Central DBT subsidy of ₹78,000 and applicable State incentive are directly disbursed to your bank account.",
       },
       {
-        question: "What happens on rainy or cloudy days?",
-        answer: "Solar panels still generate electricity on overcast and rainy days using ambient diffused sunlight, producing around 25% to 40% of their peak capacity. Because your system is connected to the grid via net metering, any deficit is automatically supplied seamlessly by the electrical grid.",
+        question: "Do solar panels generate electricity on cloudy or rainy days?",
+        answer: "Yes. Modern high-efficiency TOPCon and Mono PERC panels absorb diffuse sunlight on overcast days, typically generating 25% to 40% of their peak sunny-day output. Bi-directional net metering ensures that any deficit is automatically supplied by the grid seamlessly.",
       },
     ],
   },
@@ -164,7 +164,7 @@ export const services: ServiceItem[] = [
     name: "Industrial Solar",
     short: "High-capacity commercial & industrial solar arrays to cut operating overheads and peak demand tariffs.",
     intro: "For factories, manufacturing plants, cold storage units, warehouses, and commercial establishments, electricity is one of the highest operating expenses. EKOSYS delivers engineered high-capacity solar solutions with rapid return on investment (ROI in 3-4 years) and accelerated depreciation tax advantages.",
-    image: "/images/services/industrial-solar.png",
+    image: "/images/services/commercial-solar.jpg",
     icon: Factory,
     benefits: [
       "Dramatic reduction in peak demand electricity charges and daytime grid tariffs",
@@ -211,7 +211,7 @@ export const services: ServiceItem[] = [
     name: "Solar Maintenance",
     short: "Proactive O&M, thermographic scanning, panel washing, and electrical health checkups for peak solar yield.",
     intro: "A solar system is a 30-year financial asset that requires proactive care to prevent generation loss. Soiling, loose MC4 connectors, hotspot shading, or PID degradation can reduce output by 15% to 30%. EKOSYS provides systematic Operation & Maintenance (O&M) services across Bihar to protect your energy yield.",
-    image: "/images/services/solar-maintenance.png",
+    image: "/images/services/solar-cleaning.jpg",
     icon: Wrench,
     benefits: [
       "Specialized de-mineralized and soft-water module cleaning to eliminate stubborn dust, pollen, and bird droppings",
@@ -258,7 +258,7 @@ export const services: ServiceItem[] = [
     name: "Installation Services",
     short: "Precision engineering, safety-certified installation, DISCOM approvals, and guaranteed handover standards.",
     intro: "World-class solar hardware is only as good as the installation team that puts it together. EKOSYS provides safety-first, standard-compliant solar engineering following MNRE and CEA guidelines—guaranteeing clean workmanship, zero leakage, robust wind resistance, and smooth net-metering synchronization.",
-    image: "/images/installation/solar-installation-team.png",
+    image: "/images/installation/solar-engineers.jpg",
     icon: ShieldCheck,
     benefits: [
       "Trained solar engineers adhering to MNRE, IS 875 (wind load), and Indian Electricity Rules",
@@ -318,7 +318,7 @@ export const homeFaqs: Faq[] = [
   },
   {
     question: "What is the process to claim the PM Surya Ghar solar subsidy in Bihar?",
-    answer: "EKOSYS handles the entire subsidy application workflow on the National Portal for Rooftop Solar. After registration, DISCOM feasibility approval, installation, and bi-directional meter commissioning, the combined financial assistance: PM Surya Ghar Central DBT (₹78,000) + Extra Special State Subsidy (₹20,000) + EKOSYS Assistance (₹15,000) = ₹1,13,000 Total Benefit is credited directly and passed on to your installation.",
+    answer: "EKOSYS handles the entire subsidy application workflow on the National Portal for Rooftop Solar. Homeowners receive official Government Subsidy: PM Surya Ghar Central DBT (₹78,000) + Extra State Subsidy (₹20,000) = ₹98,000 directly via DBT into their bank account, plus an extra Limited Offer (not from Subsidy) of ₹15,000 EKOSYS Assistance on a first come, first get basis (Total Financial Benefit ₹1,13,000).",
   },
   {
     question: "What is the difference between On-Grid and Hybrid solar systems?",
@@ -326,7 +326,47 @@ export const homeFaqs: Faq[] = [
   },
   {
     question: "Where is the EKOSYS office located, and which areas do you serve?",
-    answer: "Our office is at 1st Floor, Tulsi Singh Complex, Marai Road, in front of Aakash Ganga TVS, Hajipur - 844101, Bihar. We actively serve Hajipur, Vaishali, Patna, Muzaffarpur, Samastipur, Saran, Chhapra, and project sites throughout Bihar.",
+    answer: "Our office is Opposite to Municipal Office, Hajipur - 844101, Vaishali, Bihar, India. We actively serve Hajipur, Vaishali, Patna, Muzaffarpur, Samastipur, Saran, Chhapra, and project sites throughout Bihar.",
+  },
+  {
+    question: "How much shadow-free rooftop space is required for a 3 kW or 5 kW solar plant?",
+    answer: "With our Tier-1 high-efficiency 580Wp N-Type TOPCon panels, a 3 kW system requires approximately 240 to 300 sq. ft. of shadow-free rooftop area. A 5 kW system requires around 400 to 500 sq. ft. Even on compact roofs, we design elevated canopy structures to maximize space.",
+  },
+  {
+    question: "How long does NBPDCL / SBPDCL net-meter installation take in Bihar?",
+    answer: "Under PM Surya Ghar regulations, the statutory process takes approximately 15 to 30 working days from the date of online application submission. EKOSYS manages your load sanction feasibility, discom testing fees, and joint inspection scheduling directly with local sub-divisional offices.",
+  },
+  {
+    question: "Can rooftop solar run heavy appliances like 1.5-Ton ACs and submersible pumps?",
+    answer: "Yes, absolutely. A 3 kW system comfortably powers one to two 1.5-Ton 5-Star inverter ACs, a 1 HP water pump, double-door refrigerator, smart TVs, and all household lighting simultaneously during peak daylight hours.",
+  },
+  {
+    question: "Does solar power generate electricity during monsoon rain and winter fog in Bihar?",
+    answer: "Yes. Modern N-Type bifacial TOPCon panels operate on diffuse daylight and UV radiation, generating roughly 25% to 40% of their peak rated output even during heavily overcast monsoon days and winter morning fog across Bihar.",
+  },
+  {
+    question: "Can I get a low-interest bank loan or easy monthly EMI for rooftop solar in Bihar?",
+    answer: "Yes. Under PM Surya Ghar, leading nationalized banks (including SBI, Canara Bank, PNB, and Bank of Baroda) provide collateral-free rooftop solar loans at concessional interest rates around 7% per annum. Monthly EMI payments are typically lower than your existing monthly electricity savings.",
+  },
+  {
+    question: "Will installing mounting structures cause roof leakage on concrete slabs?",
+    answer: "No. EKOSYS utilizes heavy-duty non-penetrating chemical anchor fasteners combined with multi-layer industrial bitumen weatherproofing membranes. We guarantee 100% zero roof leakage on all installations.",
+  },
+  {
+    question: "Which solar panel brands and smart inverters does EKOSYS install?",
+    answer: "We supply and install only Tier-1 ALMM and DCR-compliant brands including Tata Power Solar, Waaree Energies, Adani Solar, and Goldi Solar, paired with high-efficiency IP65 smart dual-MPPT inverters from Growatt, Sungrow, and Solis.",
+  },
+  {
+    question: "What warranties do EKOSYS solar installations come with?",
+    answer: "All solar PV modules come with a 25 to 30-year linear power generation warranty (guaranteeing over 80% generation in year 30). Smart inverters include a 5 to 10-year replacement warranty, mounting structures carry a 10-year anti-corrosion guarantee, and EKOSYS provides 5 years of comprehensive workmanship and O&M care.",
+  },
+  {
+    question: "Can I install an elevated solar structure to keep my rooftop terrace usable?",
+    answer: "Yes. We specialize in custom elevated hot-dip galvanized canopy structures (7 to 9 feet clearance). This allows you to retain 100% of your rooftop terrace space for evening walks, family gatherings, or drying clothes while enjoying free clean electricity.",
+  },
+  {
+    question: "How frequently should solar panels be cleaned in Bihar for maximum generation?",
+    answer: "Due to agricultural dust and road airborne particulate in Bihar, we recommend a simple soft-water wash every 15 to 20 days during dry months. Regular cleaning restores 10% to 25% of power generation lost to soiling.",
   },
 ];
 
@@ -368,7 +408,7 @@ export const blogPosts: BlogPost[] = [
     keyPoints: [
       "Bihar receives an average of 4.8 to 5.2 kWh/m²/day of solar insolation with over 300 sunny days per year.",
       "Net metering through NBPDCL and SBPDCL allows surplus energy credits that offset high summer power bills.",
-      "PM Surya Ghar Central DBT (₹78,000) + Extra Special State Subsidy (₹20,000) + EKOSYS Assistance (₹15,000) = ₹1,13,000 Total Subsidy Benefit for residential installations.",
+      "PM Surya Ghar Central DBT (₹78,000) + Extra State Subsidy (₹20,000) = ₹98,000 Govt Subsidy, plus EKOSYS Assistance ₹15,000 Limited Offer = ₹1,13,000 Total Benefit for residential installations.",
       "A 3 kW to 5 kW rooftop array typically pays for itself within 3.2 to 4 years in Bihar.",
     ],
     intro: "With rising electricity tariffs, expanding air conditioning loads, and abundant solar irradiation across Bihar, rooftop solar has transitioned from an alternative concept into the smartest financial investment for homeowners and commercial businesses alike. Whether you reside in Hajipur, Patna, Muzaffarpur, or Gaya, understanding the technical, financial, and regulatory steps of solar installation is key to getting maximum value from your roof.",
@@ -401,7 +441,7 @@ export const blogPosts: BlogPost[] = [
         subPoints: [
           "1 kW Rooftop System: ₹30,000 Central DBT + State & EKOSYS Assistance (Up to ₹55,000 Total)",
           "2 kW Rooftop System: ₹60,000 Central DBT + State & EKOSYS Assistance (Up to ₹90,000 Total)",
-          "3 kW and above: PM Surya Ghar Central DBT (₹78,000) + Extra Special State Subsidy (₹20,000) + EKOSYS Assistance (₹15,000) = ₹1,13,000 Total Benefit",
+          "3 kW and above: PM Surya Ghar Central DBT (₹78,000) + Extra State Subsidy (₹20,000) = ₹98,000 Govt Subsidy + EKOSYS Assistance (₹15,000 Limited Offer) = ₹1,13,000 Total Benefit",
         ],
       },
       {
@@ -468,7 +508,7 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       {
         question: "Where is the EKOSYS office in Hajipur?",
-        answer: "EKOSYS Corporation is located at 1st Floor, Tulsi Singh Complex, Marai Road, in front of Aakash Ganga TVS, Hajipur - 844101, Bihar. You can visit our office or call +91 76 44 86 80 86 for on-site solar assessments.",
+        answer: "EKOSYS Corporation is located Opposite to Municipal Office, Hajipur - 844101, Vaishali, Bihar, India. You can visit our office or call +91 76 44 86 80 86 for on-site solar assessments.",
       },
       {
         question: "Does EKOSYS service rural areas in Vaishali district?",
@@ -1746,7 +1786,7 @@ export const projectShowcases = [
 export const subsidySlabsTable = [
   {
     capacity: "1 kW System",
-    subsidy: "₹30k + ₹15k + ₹10k = ₹55,000",
+    subsidy: "Govt Subsidy ₹45,000 (Central ₹30k + State ₹15k) + EKOSYS ₹10k Offer = ₹55,000",
     approxGrossCost: "₹70,000 - ₹80,000",
     netPostSubsidy: "₹15,000 - ₹25,000",
     unitsPerMonth: "120 - 140 Units",
@@ -1754,7 +1794,7 @@ export const subsidySlabsTable = [
   },
   {
     capacity: "2 kW System",
-    subsidy: "₹60k + ₹18k + ₹12k = ₹90,000",
+    subsidy: "Govt Subsidy ₹78,000 (Central ₹60k + State ₹18k) + EKOSYS ₹12k Offer = ₹90,000",
     approxGrossCost: "₹1,35,000 - ₹1,50,000",
     netPostSubsidy: "₹45,000 - ₹60,000",
     unitsPerMonth: "240 - 280 Units",
@@ -1762,7 +1802,7 @@ export const subsidySlabsTable = [
   },
   {
     capacity: "3 kW System (Popular)",
-    subsidy: "₹78k + ₹20k + ₹15k = ₹1,13,000",
+    subsidy: "Govt Subsidy ₹98,000 (Central ₹78k + State ₹20k) + EKOSYS ₹15k Offer = ₹1,13,000",
     approxGrossCost: "₹1,95,000 - ₹2,20,000",
     netPostSubsidy: "₹82,000 - ₹1,07,000",
     unitsPerMonth: "360 - 420 Units",
@@ -1770,7 +1810,7 @@ export const subsidySlabsTable = [
   },
   {
     capacity: "5 kW System",
-    subsidy: "₹78k + ₹20k + ₹15k = ₹1,13,000",
+    subsidy: "Govt Subsidy ₹98,000 (Central ₹78k + State ₹20k) + EKOSYS ₹15k Offer = ₹1,13,000",
     approxGrossCost: "₹3,10,000 - ₹3,50,000",
     netPostSubsidy: "₹1,97,000 - ₹2,37,000",
     unitsPerMonth: "600 - 700 Units",
@@ -1778,7 +1818,7 @@ export const subsidySlabsTable = [
   },
   {
     capacity: "10 kW System",
-    subsidy: "₹78k + ₹20k + ₹15k = ₹1,13,000",
+    subsidy: "Govt Subsidy ₹98,000 (Central ₹78k + State ₹20k) + EKOSYS ₹15k Offer = ₹1,13,000",
     approxGrossCost: "₹5,80,000 - ₹6,50,000",
     netPostSubsidy: "₹4,67,000 - ₹5,37,000",
     unitsPerMonth: "1,200 - 1,400 Units",

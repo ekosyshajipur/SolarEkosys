@@ -1,0 +1,368 @@
+{
+  "project": {
+    "name": "EKOSYS Corporation",
+    "domain": "ekosys.in",
+    "framework": "Next.js 15.5.25 App Router",
+    "runtime": "Node.js (React 19, TypeScript 5.7, Tailwind CSS 3.4)",
+    "location": {
+      "city": "Hajipur",
+      "district": "Vaishali",
+      "state": "Bihar",
+      "pincode": "844101",
+      "country": "India",
+      "address": "Opposite to Municipal Office, Hajipur - 844101, Vaishali, Bihar",
+      "geo": {
+        "latitude": 25.6858,
+        "longitude": 85.2154
+      }
+    },
+    "contact": {
+      "phone": "+917644868086",
+      "phoneDisplay": "+91 76448 68086",
+      "email": "ekosys.corp@gmail.com",
+      "whatsapp": "+917644868086"
+    },
+    "compliance": [
+      "MNRE Approved Channel Partner",
+      "PM Surya Ghar Muft Bijli Yojana Registered Vendor",
+      "NBPDCL & SBPDCL Net Metering Empanelled",
+      "ISO 9001:2015 Certified EPC Protocols",
+      "IS 875 Part 3 150 km/h Wind Speed Certified GI Superstructures",
+      "CEA Technical Standards for Grid Connectivity Compliance"
+    ]
+  },
+  "routes": [
+    {
+      "path": "/",
+      "type": "Static Page",
+      "title": "EKOSYS Solar | Top Solar Company in Hajipur, Patna & Bihar",
+      "description": "Bihar's premier solar EPC. PM Surya Ghar subsidy processing (up to ₹78,000 + ₹20,000 state bonus), Tier-1 TOPCon bifacial rooftop installations, industrial plants, and lifetime O&M.",
+      "sections": 19,
+      "interactiveWidgets": [
+        "HeroSlider",
+        "SolarCalculator",
+        "ApplianceLoadSimulator",
+        "InteractiveInstallationJourney",
+        "InteractiveProjectShowcase",
+        "InteractiveMaintenanceViewer",
+        "InteractiveFaq",
+        "MobileFloatingBar"
+      ],
+      "status": "Operational (HTTP 200)"
+    },
+    {
+      "path": "/about",
+      "type": "Static Page",
+      "title": "About EKOSYS Corporation | Engineering Standards & Team",
+      "description": "Learn about EKOSYS Solar, our ISO-compliant execution methodology, engineering standards, leadership, and local Hajipur presence.",
+      "sections": 7,
+      "interactiveWidgets": [
+        "HoverLift",
+        "Reveal"
+      ],
+      "status": "Operational (HTTP 200)"
+    },
+    {
+      "path": "/services",
+      "type": "Static Page",
+      "title": "Solar Services Catalog | Turnkey EPC & Maintenance",
+      "description": "Comprehensive solar solutions: Residential, Commercial & Industrial, Rooftop Superstructures, Hardware Distribution, and O&M.",
+      "sections": 8,
+      "interactiveWidgets": [
+        "HoverLift",
+        "InteractiveFaq"
+      ],
+      "status": "Operational (HTTP 200)"
+    },
+    {
+      "path": "/services/solar-products",
+      "type": "Static Page",
+      "title": "Tier-1 Solar Products Catalog | Modules, Inverters & BOS",
+      "description": "580W+ N-Type TOPCon bifacial panels, hybrid & on-grid smart inverters, LiFePO4 batteries, hot-dip GI structures, and chemical earthing electrodes.",
+      "sections": 6,
+      "interactiveWidgets": [
+        "ProductCatalog",
+        "HoverLift"
+      ],
+      "status": "Operational (HTTP 200)"
+    },
+    {
+      "path": "/services/rooftop-solar",
+      "type": "Static Page",
+      "title": "Rooftop Solar EPC | 3D Shadow Modeling & Superstructures",
+      "description": "Elevated and flush-mount rooftop solar power systems engineered for Bihar weather with zero roof penetration damage.",
+      "sections": 6,
+      "interactiveWidgets": [
+        "SolarCalculator",
+        "HoverLift"
+      ],
+      "status": "Operational (HTTP 200)"
+    },
+    {
+      "path": "/services/residential-solar",
+      "type": "Static Page",
+      "title": "Residential Solar Systems | 2kW to 10kW Sizing Matrix",
+      "description": "Complete home solar guide with PM Surya Ghar ₹78,000 subsidy, zero electricity bills, and battery-backed hybrid solutions.",
+      "sections": 7,
+      "interactiveWidgets": [
+        "ApplianceLoadSimulator",
+        "SolarCalculator",
+        "HoverLift"
+      ],
+      "status": "Operational (HTTP 200)"
+    },
+    {
+      "path": "/services/industrial-solar",
+      "type": "Static Page",
+      "title": "Industrial & Commercial Solar EPC | 40% Tax Depreciation",
+      "description": "High-tension 50kW to 1MW+ solar power plants for factories, cold storages, hospitals, and educational institutions with Solar-DG sync.",
+      "sections": 7,
+      "interactiveWidgets": [
+        "InteractiveProjectShowcase",
+        "HoverLift"
+      ],
+      "status": "Operational (HTTP 200)"
+    },
+    {
+      "path": "/services/solar-maintenance",
+      "type": "Static Page",
+      "title": "Solar Operation & Maintenance (O&M) | Thermographic Diagnostics",
+      "description": "Preventive maintenance, TDS-controlled robotic and manual soft washing, string electrical audits, and guaranteed PR performance ratios.",
+      "sections": 7,
+      "interactiveWidgets": [
+        "InteractiveMaintenanceViewer",
+        "HoverLift"
+      ],
+      "status": "Operational (HTTP 200)"
+    },
+    {
+      "path": "/services/installation-services",
+      "type": "Static Page",
+      "title": "10-Step Precision Installation Services | Safety Standards",
+      "description": "Step-by-step engineering workflow from rooftop shadow modeling and structural clamping to chemical earthing and DISCOM net meter synchronization.",
+      "sections": 6,
+      "interactiveWidgets": [
+        "InteractiveInstallationJourney",
+        "HoverLift"
+      ],
+      "status": "Operational (HTTP 200)"
+    },
+    {
+      "path": "/subsidy",
+      "type": "Static Page",
+      "title": "PM Surya Ghar Subsidy Guide | ₹78,000 Central + ₹20,000 State",
+      "description": "Authoritative guide to PM Surya Ghar Muft Bijli Yojana in Bihar. Subsidy slabs table, application documents checklist, and approval roadmap.",
+      "sections": 8,
+      "interactiveWidgets": [
+        "SolarCalculator",
+        "InteractiveFaq"
+      ],
+      "status": "Operational (HTTP 200)"
+    },
+    {
+      "path": "/installation",
+      "type": "Static Page",
+      "title": "Solar Installation Process & Engineering Standards",
+      "description": "Detailed walkthrough of the 10 installation stages, IS 875 wind rating protocols, dual chemical earthing, and DISCOM commissioning.",
+      "sections": 7,
+      "interactiveWidgets": [
+        "InteractiveInstallationJourney",
+        "HoverLift"
+      ],
+      "status": "Operational (HTTP 200)"
+    },
+    {
+      "path": "/blog",
+      "type": "Static Page",
+      "title": "Solar Knowledge Center & Technical Guides | Bihar Solar Insights",
+      "description": "Engineering articles, PM Surya Ghar updates, DISCOM net metering procedures, inverter selection guides, and maintenance tips.",
+      "sections": 5,
+      "interactiveWidgets": [
+        "HoverLift"
+      ],
+      "status": "Operational (HTTP 200)"
+    },
+    {
+      "path": "/contact",
+      "type": "Static Page",
+      "title": "Contact EKOSYS Solar | Free Rooftop Solar Survey & Consultation",
+      "description": "Get in touch with EKOSYS engineers in Hajipur. Request a free rooftop feasibility assessment, subsidy calculation, and customized solar quote.",
+      "sections": 6,
+      "interactiveWidgets": [
+        "ContactForm",
+        "HoverLift"
+      ],
+      "status": "Operational (HTTP 200)"
+    },
+    {
+      "path": "/privacy",
+      "type": "Static Page",
+      "title": "Privacy Policy | EKOSYS Corporation",
+      "description": "Transparent data protection and lead privacy terms.",
+      "sections": 4,
+      "interactiveWidgets": [],
+      "status": "Operational (HTTP 200)"
+    },
+    {
+      "path": "/terms",
+      "type": "Static Page",
+      "title": "Terms and Conditions | EKOSYS Corporation",
+      "description": "Terms of quotation, technical estimations, and subsidy disclaimers.",
+      "sections": 4,
+      "interactiveWidgets": [],
+      "status": "Operational (HTTP 200)"
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "solar-calculator",
+      "name": "SolarCalculator",
+      "file": "components/solar-calculator.tsx",
+      "description": "Interactive ROI, plant sizing, and PM Surya Ghar subsidy calculator with dynamic bill slider, kW selector, and instant WhatsApp estimate sharing.",
+      "features": [
+        "Bill Mode (₹1,000 to ₹15,000/mo slider with quick presets)",
+        "Capacity Mode (1kW to 10kW preset buttons)",
+        "Tier-1 580W TOPCon Bifacial module count calculation",
+        "PM Surya Ghar Central Subsidy (up to ₹78,000 DBT)",
+        "Bihar State Additional Subsidy (up to ₹20,000)",
+        "EKOSYS Limited Offer Subsidy Assistance (up to ₹15,000)",
+        "25-Year cumulative savings forecast with 3% tariff escalation",
+        "Environmental metrics (CO2 tonnes offset and trees planted equivalent)",
+        "Pre-filled WhatsApp estimate sharing link"
+      ]
+    },
+    {
+      "id": "appliance-load-simulator",
+      "name": "ApplianceLoadSimulator",
+      "file": "components/appliance-load-simulator.tsx",
+      "description": "Interactive load simulation tool showcasing real-time concurrent appliance operation across 2kW, 3kW, 5kW, 8kW, and 10kW solar configurations.",
+      "features": [
+        "5 plant capacity tiers with instant tab switching",
+        "Interactive appliance power specs (ACs, Refrigerators, Submersible Pumps, Geysers, Induction, EV Chargers)",
+        "Simultaneous peak load calculation and solar synchronization badges",
+        "Direct proposal CTA pre-filled with the selected capacity"
+      ]
+    },
+    {
+      "id": "interactive-installation-journey",
+      "name": "InteractiveInstallationJourney",
+      "file": "components/interactive-installation-journey.tsx",
+      "description": "Detailed 4-phase, 10-step interactive stepper with technical checklists, engineering diagrams, and quality benchmarks.",
+      "features": [
+        "Phase 1: Engineering Assessment & Shadow Modeling",
+        "Phase 2: Structural GI Erection & Module Clamping",
+        "Phase 3: Electrical BOS, Inverter & Chemical Earthing",
+        "Phase 4: DISCOM Net-Meter Synchronization & DBT Release",
+        "Interactive step navigation with completion progress indicator"
+      ]
+    },
+    {
+      "id": "interactive-project-showcase",
+      "name": "InteractiveProjectShowcase",
+      "file": "components/interactive-project-showcase.tsx",
+      "description": "Filterable portfolio of real-world solar installations across Hajipur, Patna, Muzaffarpur, and Vaishali with technical spec modals.",
+      "features": [
+        "District & sector filters (All, Residential, Commercial, Hajipur, Patna)",
+        "Technical metrics on hover (kW capacity, module brand, annual generation, CO2 offset)",
+        "Modal view with plant engineering specifications"
+      ]
+    },
+    {
+      "id": "interactive-maintenance-viewer",
+      "name": "InteractiveMaintenanceViewer",
+      "file": "components/interactive-maintenance-viewer.tsx",
+      "description": "Solar O&M diagnostic inspector showing thermal imaging hotspot analysis, TDS soft water washing, and electrical resistance testing.",
+      "features": [
+        "4 Maintenance protocol tabs",
+        "Thermal scan before/after hotspot comparison",
+        "TDS water mineral threshold indicators (<50 PPM)",
+        "Chemical earth pit resistance benchmarks (<5 Ohms)"
+      ]
+    },
+    {
+      "id": "interactive-faq",
+      "name": "InteractiveFaq",
+      "file": "components/interactive-faq.tsx",
+      "description": "Searchable FAQ component with real-time text filter and category pills for instant query resolution.",
+      "features": [
+        "Instant live-search input",
+        "Category filters (All, Subsidy, Net Metering, Technical, Pricing)",
+        "Smooth accordion expand/collapse with accessible ARIA attributes"
+      ]
+    },
+    {
+      "id": "mobile-floating-bar",
+      "name": "MobileFloatingBar",
+      "file": "components/mobile-floating-bar.tsx",
+      "description": "Fixed glassmorphism bottom action bar on mobile viewports for one-tap calling, WhatsApp chat, and quotation access.",
+      "features": [
+        "Quick 'Call Now' action (+91 76448 68086)",
+        "Instant 'WhatsApp' chat with pre-filled greeting",
+        "Quick 'Free Quote' button linked to /contact"
+      ]
+    },
+    {
+      "id": "hero-slider",
+      "name": "HeroSlider",
+      "file": "components/hero-slider.tsx",
+      "description": "High-performance background image slideshow with smooth opacity crossfades and manual indicator dots.",
+      "features": [
+        "Auto-advancing 6-second rotation",
+        "Optimized Next.js Image components with responsive sizes",
+        "Non-blocking, GPU-accelerated transitions"
+      ]
+    },
+    {
+      "id": "product-catalog",
+      "name": "ProductCatalog",
+      "file": "components/product-catalog.tsx",
+      "description": "Hardware catalog with category tabs (All, Solar Panels, Inverters, Structures, BOS) and detailed specification cards.",
+      "features": [
+        "Category tabs filtering",
+        "Technical spec highlights (efficiency, warranty, certifications)",
+        "Instant 'Enquire on WhatsApp' action per product"
+      ]
+    },
+    {
+      "id": "contact-form",
+      "name": "ContactForm",
+      "file": "components/contact-form.tsx",
+      "description": "Secure lead capture form with Zod validation, anti-spam honeypot, rate limiting, and automated confirmation email trigger.",
+      "features": [
+        "Client and server-side Zod validation",
+        "Phone number format validation",
+        "Honeypot anti-spam trap",
+        "Dual SMTP / Resend API email dispatch with branded HTML template",
+        "Google Sheets webhook sync support"
+      ]
+    }
+  ],
+  "designSystem": {
+    "colors": {
+      "solar-400": "#f59e0b",
+      "solar-500": "#d97706",
+      "solar-50": "#fffbeb",
+      "ocean-700": "#0369a1",
+      "ocean-800": "#075985",
+      "ink": "#0b192c",
+      "emerald-500": "#10b981",
+      "slate-900": "#0f172a"
+    },
+    "typography": {
+      "display": "Outfit, var(--font-outfit), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+      "body": "Manrope, var(--font-manrope), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+    },
+    "effects": {
+      "glassmorphism": "backdrop-blur-xl bg-white/90 border border-slate-200/80 shadow-card",
+      "cardHover": "hover:-translate-y-1 hover:shadow-xl transition-all duration-300",
+      "glow": "shadow-[0_0_24px_rgba(245,158,11,0.35)]"
+    }
+  },
+  "runtimeArchitecture": {
+    "chunkResolutionHook": "Implemented in next.config.mjs. Intercepts Module._resolveFilename to dynamically map ./<id>.js chunks to .next/server/chunks/<id>.js or .next/server/<id>.js, preventing 'Cannot find module ./331.js' crashes.",
+    "cacheIsolation": "Controlled via scripts/clean.js. Purges .next/server before dev or build runs to eliminate dev/prod artifact collisions.",
+    "offlineResilience": "System font fallbacks registered in app/globals.css and next.config.mjs headers configured for CORS and immutable static caching."
+  },
+  "lastUpdated": "2026-09-05T07:28:22.727Z",
+  "status": "All 39 static routes verified & operational"
+}

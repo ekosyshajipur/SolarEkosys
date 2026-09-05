@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { Breadcrumbs, CtaBand, FaqList } from "@/components/page-elements";
 import { Reveal } from "@/components/reveal";
+import { SolarCalculator } from "@/components/solar-calculator";
 import { ButtonLink, SectionHeading } from "@/components/ui";
 import { subsidySlabsTable } from "@/lib/content";
 
@@ -76,11 +77,11 @@ const commonMistakes = [
 const subsidyFaqs = [
   {
     question: "How much total subsidy is available under PM Surya Ghar in Bihar?",
-    answer: "Under the PM Surya Ghar: Muft Bijli Yojana & State Incentive Schemes, residential consumers can receive up to ₹1,13,000 total combined financial assistance for systems of 3 kW capacity and above: PM Surya Ghar Central DBT (₹78,000) + Extra Special State Subsidy (₹20,000) + EKOSYS Assistance (₹15,000) = ₹1,13,000.",
+    answer: "Under the PM Surya Ghar: Muft Bijli Yojana & Bihar State Incentive Scheme, residential consumers receive PM Surya Ghar Central DBT (₹78,000) + Extra State Subsidy (₹20,000) = ₹98,000 official Government Subsidy. In addition, EKOSYS provides an extra Limited Offer (not from Subsidy) of ₹15,000 EKOSYS Assistance on a first come, first get basis, bringing total financial benefits up to ₹1,13,000.",
   },
   {
     question: "Is the solar subsidy deducted upfront from my quotation?",
-    answer: "Under Central Government guidelines, the primary ₹78,000 DBT is credited directly to the homeowner's bank account following DISCOM commissioning. Additional state incentives and EKOSYS assistance are passed on directly during billing and execution.",
+    answer: "Under Central Government guidelines, the primary ₹78,000 DBT is credited directly to the homeowner's bank account following DISCOM commissioning. Additional state incentives and the exclusive EKOSYS promotional discount are passed on directly during billing and execution.",
   },
   {
     question: "Does EKOSYS assist with the PM Surya Ghar online application?",
@@ -91,8 +92,8 @@ const subsidyFaqs = [
     answer: "No. PM Surya Ghar is specifically for residential domestic connections. However, commercial and industrial establishments in Bihar benefit from 40% Accelerated Depreciation (AD) tax write-offs under Section 32 of the Income Tax Act, resulting in major tax savings in the first financial year.",
   },
   {
-    question: "How do I claim the ₹1,13,000 Total Subsidy Benefit?",
-    answer: "The ₹78,000 is the official Central DBT subsidy for 3 kW+ residential rooftop systems, the ₹20,000 is the Extra Special State Subsidy, and the ₹15,000 is our limited-period EKOSYS engineering assistance discount. EKOSYS ensures 100% transparency and handles all paperwork needed to unlock all three tiers of savings for your home.",
+    question: "How do I claim the ₹98,000 Subsidy + ₹15,000 EKOSYS Limited Offer?",
+    answer: "The ₹98,000 is the official Government Subsidy: PM Surya Ghar Central DBT (₹78,000) + Extra State Subsidy (₹20,000) = ₹98,000. The ₹15,000 is our limited-period EKOSYS engineering assistance discount (first come, first get offer, not from subsidy). EKOSYS handles all paperwork needed to unlock all savings for your home.",
   },
 ];
 
@@ -152,25 +153,70 @@ export default function SubsidyPage() {
       <section className="section-shell pb-0">
         <div className="overflow-hidden rounded-3xl border-2 border-solar-400 bg-gradient-to-br from-ink via-[#07243a] to-ink p-6 sm:p-8 text-white shadow-2xl">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full bg-solar-400/20 px-3.5 py-1 text-xs font-black uppercase tracking-wider text-solar-400 border border-solar-400/30">
-                <Sparkles className="size-3.5 text-solar-400" />
-                <span>Limited Period Subsidy Scheme</span>
+            <div className="max-w-3xl">
+              <div className="flex flex-wrap items-center gap-2">
+                <div className="inline-flex items-center gap-1.5 rounded-full bg-solar-400/20 px-3.5 py-1 text-xs font-black uppercase tracking-wider text-solar-400 border border-solar-400/30">
+                  <Sparkles className="size-3.5 text-solar-400" />
+                  <span>PM Surya Ghar + Bihar Scheme</span>
+                </div>
+                <span className="inline-flex items-center rounded-full bg-amber-400/20 px-3 py-1 text-xs font-black uppercase tracking-wider text-amber-300 border border-amber-400/30">
+                  Limited Time Offer · First Come First Get
+                </span>
               </div>
-              <h2 className="mt-3 font-display text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white">
-                PM Surya Ghar Central DBT (<span className="text-solar-400">₹78,000</span>) + Extra Special State Subsidy (<span className="text-solar-400">₹20,000</span>) + EKOSYS Assistance (<span className="text-solar-400">₹15,000</span>) = <span className="text-solar-400 underline underline-offset-4">₹1,13,000</span>
-              </h2>
-              <p className="mt-3 text-xs sm:text-sm text-slate-200 leading-relaxed max-w-3xl">
-                Claim maximum financial assistance on your rooftop solar plant in Bihar. EKOSYS handles all National Portal documentation, DISCOM approvals, and direct bank transfer facilitation.
-              </p>
+
+              {/* 1. Official Government Subsidy Section */}
+              <div className="mt-4 rounded-2xl bg-white/10 p-4 border border-white/15 backdrop-blur-sm">
+                <p className="text-xs font-black uppercase tracking-wider text-solar-400">
+                  Official Government Direct Subsidy (DBT)
+                </p>
+                <h2 className="mt-1 font-display text-xl sm:text-2xl lg:text-3xl font-black tracking-tight text-white leading-snug">
+                  PM Surya Ghar Central DBT (<span className="text-solar-400">₹78,000</span>) + Extra State Subsidy (<span className="text-solar-400">₹20,000</span>) = <span className="text-solar-400 underline underline-offset-4">₹98,000</span>
+                </h2>
+                <p className="mt-1.5 text-xs text-slate-300 leading-relaxed">
+                  Official DBT subsidy credited directly to your bank account following DISCOM net-meter inspection and commissioning.
+                </p>
+              </div>
+
+              {/* 2. Extra Limited Offer - NOT from Subsidy */}
+              <div className="mt-3 rounded-2xl bg-gradient-to-r from-amber-500/20 via-solar-500/10 to-transparent p-3.5 border border-amber-400/40">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-black uppercase tracking-wider text-amber-300">
+                    ⚡ Extra Limited Offer (Not from Subsidy)
+                  </span>
+                  <span className="rounded bg-solar-400 px-2 py-0.5 text-[10px] font-black uppercase text-ink">
+                    First Come First Get
+                  </span>
+                </div>
+                <p className="mt-1 text-sm sm:text-base font-black text-white">
+                  EKOSYS Assistance: <span className="text-solar-400 font-extrabold text-base sm:text-lg">₹15,000 Discount</span> for Limited time period
+                </p>
+                <p className="mt-0.5 text-xs text-slate-300">
+                  Exclusive installer discount directly deducted from your project installation bill for early applicants.
+                </p>
+              </div>
+
+              {/* Total Summary */}
+              <div className="mt-3.5 flex flex-wrap items-center gap-2 sm:gap-3 rounded-xl bg-ink/80 px-3.5 py-2 border border-white/10">
+                <span className="text-xs font-bold text-slate-300">Total Financial Benefit:</span>
+                <span className="font-display text-xl sm:text-2xl font-black text-solar-400">₹1,13,000*</span>
+                <span className="text-xs text-slate-400">(₹98,000 Govt Subsidy + ₹15,000 EKOSYS Limited Offer)</span>
+              </div>
             </div>
-            <div className="shrink-0">
+
+            <div className="shrink-0 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <ButtonLink href="/contact" variant="primary" arrow>
-                Claim ₹1,13,000 Subsidy
+                Claim Limited Offer & Subsidy
               </ButtonLink>
             </div>
           </div>
         </div>
+      </section>
+
+      {/* INTERACTIVE SOLAR SAVINGS & SUBSIDY CALCULATOR */}
+      <section className="section-shell pb-0">
+        <Reveal>
+          <SolarCalculator />
+        </Reveal>
       </section>
 
       {/* 2. SUBSIDY SLABS COMPARISON TABLE */}

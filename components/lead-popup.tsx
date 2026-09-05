@@ -132,70 +132,116 @@ export function LeadPopup() {
               <div className="flex items-center">
                 <Image src="/webLogo.png" width={150} height={44} alt="EKOSYS logo" className="h-8 w-auto object-contain" />
               </div>
-              <p className="mt-4 text-xs font-black uppercase tracking-[.18em] text-ocean-700">Get Solar Assistance in Bihar</p>
+              <p className="mt-3 text-xs font-black uppercase tracking-[.18em] text-ocean-700">Get Solar Assistance in Bihar</p>
 
               {mode === "offer" ? (
                 <>
-                  <h2 id="lead-popup-title" className="mt-2 font-display text-2xl font-bold leading-tight text-ink sm:text-3xl">
-                    Get Free Solar Consultation & Subsidy Guidance
+                  <h2 id="lead-popup-title" className="mt-1.5 font-display text-xl sm:text-2xl font-black leading-tight text-ink">
+                    PM Surya Ghar Subsidy & Limited Offer
                   </h2>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">
-                    पहले आएं, पहले पाओ के आधार पर सोलर सब्सिडी की सही जानकारी पाएं.
+                  <p className="mt-1 text-xs text-slate-600 font-medium">
+                    पहले आएं, पहले पाएं के आधार पर सोलर सब्सिडी और विशेष छूट का लाभ उठाएं।
                   </p>
-                  <p>Speak with our Experts to evaluate your rooftop suitability.</p>
-                  
-                  <div className="mt-3.5 rounded-2xl border-2 border-solar-400 bg-gradient-to-r from-solar-100/90 to-solar-50 p-4 shadow-sm">
-                    <div className="flex items-center gap-2 text-ocean-700">
-                      <Sparkles className="size-4 shrink-0 text-solar-600" />
-                      <p className="text-xs font-black uppercase tracking-wider">Limited Period Subsidy Scheme</p>
+
+                  {/* HIGHLIGHT SUBSIDY & EXCLUSIVE OFFER CARD */}
+                  <div className="mt-3 overflow-hidden rounded-2xl border-2 border-solar-400 bg-gradient-to-br from-solar-50 via-white to-solar-100/50 p-3.5 shadow-sm">
+                    <div className="flex items-center justify-between gap-1 border-b border-solar-200/80 pb-2">
+                      <div className="flex items-center gap-1.5 text-ocean-800">
+                        <Sparkles className="size-3.5 text-solar-600 shrink-0" />
+                        <span className="text-[11px] font-black uppercase tracking-wider">PM Surya Ghar + Bihar Scheme</span>
+                      </div>
+                      <span className="rounded-full bg-ocean-700 px-2 py-0.5 text-[10px] font-bold text-white">
+                        3 kW Setup
+                      </span>
                     </div>
-                    <p className="mt-1.5 font-display text-lg font-black text-ink sm:text-xl leading-tight">
-                      Get Up to <span className="text-ocean-700 underline underline-offset-2">₹1,13,000 Total Subsidy</span>
-                    </p>
-                    <p className="mt-1.5 text-[11px] font-bold text-slate-700 leading-snug">
-                      PM Surya Ghar Central DBT (₹78,000) + Extra Special State Subsidy (₹20,000) + EKOSYS Assistance (₹15,000) = <span className="text-ocean-700 font-extrabold">₹1,13,000*</span>
-                    </p>
+
+                    {/* Government Subsidy Equation */}
+                    <div className="mt-2.5 rounded-xl bg-white p-2.5 border border-slate-200">
+                      <p className="text-[10px] font-black uppercase tracking-wider text-slate-500">Government Direct Subsidy (DBT)</p>
+                      <p className="mt-1 text-xs sm:text-sm font-extrabold text-ink leading-snug">
+                        PM Surya Ghar Central DBT (<span className="text-ocean-700">₹78,000</span>) + Extra State Subsidy (<span className="text-ocean-700">₹20,000</span>) = <span className="text-ocean-700 font-black">₹98,000</span>
+                      </p>
+                    </div>
+
+                    {/* Limited Offer (Not from Subsidy) */}
+                    <div className="mt-2 rounded-xl bg-gradient-to-r from-amber-500/10 to-solar-100 p-2.5 border border-amber-400/50">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] font-black uppercase tracking-wider text-amber-900">
+                          ⚡ Limited Offer (Not from Subsidy)
+                        </span>
+                        <span className="text-[9px] font-black uppercase text-amber-800 bg-amber-200/80 px-1.5 py-0.5 rounded">
+                          First Come First Serve
+                        </span>
+                      </div>
+                      <p className="mt-1 text-xs font-black text-ink">
+                        EKOSYS Assistance: <span className="text-ocean-700 font-extrabold text-sm">₹15,000 Discount</span>
+                      </p>
+                      <p className="text-[10px] text-slate-600 mt-0.5">
+                        Exclusive installer discount for limited period while slots last.
+                      </p>
+                    </div>
+
+                    {/* Combined Total Benefit */}
+                    <div className="mt-2.5 flex items-center justify-between bg-ink text-white rounded-xl px-3 py-2">
+                      <span className="text-xs font-bold text-slate-300">Total Financial Benefit:</span>
+                      <span className="text-sm sm:text-base font-display font-black text-solar-400">₹1,13,000*</span>
+                    </div>
                   </div>
 
-                  <ul className="mt-4 space-y-2 text-xs sm:text-sm font-bold text-slate-700">
+                  <ul className="mt-3 space-y-1.5 text-xs font-bold text-slate-700">
                     {[
-                      "Up to ₹1,13,000* Total Subsidy Benefit assistance",
-                      "Custom 3D rooftop shadow analysis",
-                      "PM Surya Ghar paperwork & DISCOM net-metering support",
-                      "Tier-1 components with 30-Year Warranty*",
-                      "Prompt local engineering team in Bihar",
+                      "Central DBT ₹78,000 + State Subsidy ₹20,000 = ₹98,000",
+                      "EKOSYS Limited Offer: Extra ₹15,000 Assistance",
+                      "End-to-end NBPDCL / SBPDCL net-metering & portal paperwork",
+                      "Tier-1 TOPCon Solar Modules with 30-Year Warranty*",
                     ].map((item) => (
-                      <li className="flex items-start gap-2.5" key={item}>
-                        <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-solar-600" />
-                        <span>{item}</span>
+                      <li className="flex items-start gap-2" key={item}>
+                        <CheckCircle2 className="mt-0.5 size-3.5 shrink-0 text-emerald-600" />
+                        <span className="text-[11px] leading-tight">{item}</span>
                       </li>
                     ))}
                   </ul>
 
                   <button
                     onClick={() => setMode("form")}
-                    className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-solar-400 px-5 text-sm font-extrabold text-ink shadow-glow transition hover:bg-solar-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-solar-500"
+                    className="mt-4 inline-flex min-h-11 w-full items-center justify-center rounded-full bg-solar-400 px-5 text-xs font-black uppercase tracking-wider text-ink shadow-glow transition hover:bg-solar-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-solar-500"
                   >
-                    Request Free Solar Quote
+                    Claim Limited Offer & Get Quote
                   </button>
 
-                  <a
-                    href={`tel:${site.phone}`}
-                    className="mt-3 flex min-h-11 items-center justify-center gap-2 rounded-full border border-slate-200 text-sm font-bold text-ink transition hover:bg-slate-50"
-                  >
-                    <Phone className="size-4 text-ocean-700" />
-                    Call {site.phoneDisplay}
-                  </a>
+                  <div className="mt-2.5 grid grid-cols-2 gap-2">
+                    <a
+                      href={`tel:${site.phone}`}
+                      className="flex min-h-10 items-center justify-center gap-1.5 rounded-full border border-slate-200 text-xs font-bold text-ink transition hover:bg-slate-50"
+                    >
+                      <Phone className="size-3.5 text-ocean-700" />
+                      Call Us
+                    </a>
+                    <a
+                      href={site.whatsapp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex min-h-10 items-center justify-center gap-1.5 rounded-full bg-emerald-600 text-xs font-bold text-white transition hover:bg-emerald-700 shadow-sm"
+                    >
+                      WhatsApp Us
+                    </a>
+                  </div>
                 </>
               ) : (
                 <>
-                  <h2 id="lead-popup-title" className="mt-2 font-display text-2xl font-bold text-ink">
+                  <h2 id="lead-popup-title" className="mt-2 font-display text-xl font-bold text-ink">
                     Request Solar Callback
                   </h2>
-                  <p className="mt-1 text-sm text-slate-600">Share your details and an EKOSYS engineer will contact you promptly.</p>
-                  <div className="mt-5">
+                  <p className="mt-1 text-xs text-slate-600">Share your details and an EKOSYS engineer will contact you promptly.</p>
+                  <div className="mt-4">
                     <ContactForm compact onSuccess={handleSuccess} />
                   </div>
+                  <button
+                    onClick={() => setMode("offer")}
+                    className="mt-3 text-xs font-bold text-slate-500 underline text-center w-full hover:text-ink"
+                  >
+                    ← Back to Subsidy & Offer Details
+                  </button>
                 </>
               )}
 
